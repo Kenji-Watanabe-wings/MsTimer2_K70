@@ -1,0 +1,2 @@
+# MsTimer2_K70
+MsTimer2をK70MsTimer2_K70に更新する
