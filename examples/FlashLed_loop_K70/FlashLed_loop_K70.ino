@@ -1,4 +1,4 @@
-#include <MsTimer2_K70.h>　/* ライブラリ使用を宣言 */
+#include <MsTimer2_K70.h>	/* ライブラリ使用を宣言 */
 
 #if ARDUINO >= 100
 const int led_pin = LED_BUILTIN;	// 1.0 built in LED pin var
