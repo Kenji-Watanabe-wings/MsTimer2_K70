@@ -34,13 +34,10 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include <MsTimer2.h>
+#include <MsTimer2_K70.h>
 
-unsigned long MsTimer2::msecs;
-void (*MsTimer2::func)();
-volatile unsigned long MsTimer2::count;
-volatile char MsTimer2::overflowing;
-volatile unsigned int MsTimer2::tcnt2;
+MsTimer2 mstimer2;
+
 #if defined(__arm__) && defined(TEENSYDUINO)
 static IntervalTimer itimer;
 #endif
@@ -206,15 +203,15 @@ ISR(TIMER4_OVF_vect) {
 ISR(TIMER2_OVF_vect) {
 #endif
 #if defined (__AVR_ATmega168__) || defined (__AVR_ATmega48__) || defined (__AVR_ATmega88__) || defined (__AVR_ATmega328P__) || defined (__AVR_ATmega1280__) || defined(__AVR_ATmega2560__) || defined(__AVR_AT90USB646__) || defined(__AVR_AT90USB1286__)
-	TCNT2 = MsTimer2::tcnt2;
+	TCNT2 = mstimer2.tcnt2;
 #elif defined (__AVR_ATmega128__)
-	TCNT2 = MsTimer2::tcnt2;
+	TCNT2 = mstimer2.tcnt2;
 #elif defined (__AVR_ATmega8__)
-	TCNT2 = MsTimer2::tcnt2;
+	TCNT2 = mstimer2.tcnt2;
 #elif defined (__AVR_ATmega32U4__)
 	// not necessary on 32u4's high speed timer4
 #endif
-	MsTimer2::_overflow();
+	mstimer2._overflow();
 }
 #endif // AVR
 

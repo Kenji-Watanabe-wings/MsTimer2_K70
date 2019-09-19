@@ -4,7 +4,7 @@
   millisecond on timer2
   For Details see: http://www.arduino.cc/playground/Main/MsTimer2
 */
-#include <MsTimer2.h>
+#include "MsTimer2_K70.h"
 
 // Switch on LED on and off each half second
 
@@ -27,8 +27,8 @@ void setup()
 {
   pinMode(led_pin, OUTPUT);
 
-  MsTimer2::set(500, flash); // 500ms period
-  MsTimer2::start();
+  mstimer2.set(500, flash); // 500ms period
+  mstimer2.start();
 }
 
 void loop()
