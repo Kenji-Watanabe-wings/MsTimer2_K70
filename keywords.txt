@@ -13,6 +13,8 @@ mstimer2	KEYWORD1
 set	KEYWORD2
 start	KEYWORD2
 stop	KEYWORD2
+MsTimer2_K70_setup	KEYWORD2
+MsTimer2_K70_loop	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
