@@ -7,7 +7,7 @@ const int led_pin = 13;			// default to pin 13
 #endif
 
 #define MSTIME (500)	// 500ms period	
-bool mstimer2_callback_exc = false;
+volatile bool mstimer2_callback_exc = false;
 
 void flash()	/* 500ms */
 {
