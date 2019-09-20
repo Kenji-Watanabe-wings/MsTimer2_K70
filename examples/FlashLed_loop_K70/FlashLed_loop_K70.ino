@@ -18,7 +18,7 @@ void setup()
 {
 	pinMode(led_pin, OUTPUT);
 
-	mstimer2.set(500, flash); // 500ms period
+	mstimer2.set(MSTIME, flash); // 500ms period
 	mstimer2.start();
 }
 

@@ -7,7 +7,7 @@ const int led_pin = LED_BUILTIN;	// 1.0 built in LED pin var
 const int led_pin = 13;			// default to pin 13
 #endif
 
-#define MSTIME (500)	// 500ms period	
+#define MSTIME (1000)	// 1000ms period	
 static volatile bool mstimer2_callback_exc = false;
 
 void flash()	/* 500ms */
@@ -19,7 +19,7 @@ void MsTimer2_K70_setup()
 {
 	pinMode(led_pin, OUTPUT);
 
-	mstimer2.set(500, flash); // 500ms period
+	mstimer2.set(MSTIME, flash); // 500ms period
 	mstimer2.start();
 }
 

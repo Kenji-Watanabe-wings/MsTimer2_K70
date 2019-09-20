@@ -3,6 +3,7 @@
 
 void setup()
 {
+	Serial.begin(115200);
 	MsTimer2_K70_setup();
 }
 
