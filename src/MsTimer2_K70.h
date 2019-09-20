@@ -27,4 +27,9 @@ private:
 
 extern MsTimer2 mstimer2;
 
+/* Independ functions */
+
+void MsTimer2_K70_setup();
+bool MsTimer2_K70_loop();
+
 #endif /* MsTimer2_h */
