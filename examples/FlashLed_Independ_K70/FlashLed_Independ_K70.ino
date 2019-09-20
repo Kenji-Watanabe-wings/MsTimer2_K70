@@ -1,6 +1,5 @@
 #include <MsTimer2_K70.h>
 
-
 void setup()
 {
 	Serial.begin(115200);
